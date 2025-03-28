@@ -75,7 +75,7 @@ form input:active {
   border-radius: 50%;
   display: inline-block;
   border: 3px solid;
-  border-color: #ff3d00 #ff3d00 transparent transparent;
+  border-color: orange;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
@@ -92,7 +92,7 @@ form input:active {
   bottom: 0;
   margin: auto;
   border: 3px solid;
-  border-color: transparent transparent #ff3d00 #ff3d00;
+  border-color: white;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -104,7 +104,7 @@ form input:active {
 .loader::before {
   width: 32px;
   height: 32px;
-  border-color: #ff3d00 #ff3d00 transparent transparent;
+  border-color: black;
   animation: rotation 1.5s linear infinite;
 }
 
@@ -112,21 +112,31 @@ form input:active {
   0% {
     transform: rotate(0deg);
   }
-
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.7;
+  }
   100% {
     transform: rotate(360deg);
+    opacity: 1;
   }
 }
 
 @keyframes rotationBack {
   0% {
     transform: rotate(0deg);
+    opacity: 1;
   }
-
+  50% {
+    transform: rotate(-180deg);
+    opacity: 0.5;
+  }
   100% {
     transform: rotate(-360deg);
+    opacity: 1;
   }
 }
+
 .hidden {
   display: none;
 }
